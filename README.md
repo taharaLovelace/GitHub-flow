@@ -1,1 +1,3 @@
-# GitHub-flow
+Desenvolvido por: Alexandre Augusto Tescaro Oliveira; Augusto Guaschi Morato; Hugo Tahara Menegatti; João Vitor de Sessa;
+
+Problemática: Elabore um projeto em linguagem C que: Gere/Crie um vetor de números inteiros com 1000 entradas; Gere funções que: Preencha essas mil posições do vetor através de uma função que gere números aleatórios e os introduza no vetor. Ordene esse vetor com o algoritmo de ordenação chamado de Bubble Sort. Ordene esse vetor com o algoritmo de ordenação chamado de Quick Sort. Imprima esse vetor; Tire a média do vetor; Tire a mediana do vetor; Diga qual é o maior valor presente no vetor? Diga qual é o menor valor presente no vetor? Todas essas funções imprimem seus resultados em tela diretamente .
