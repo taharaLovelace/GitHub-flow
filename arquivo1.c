@@ -29,18 +29,30 @@ void bubble_sort(int vet[]){
       }
 }
 
+int calc_mediana(int vet[]){
+
+    int mediana=0;
+    mediana= vet[499]+vet[500];
+    return mediana/2.;
+
+}
+
 int main(){
 
     setlocale(LC_ALL, "");
     int vetor[N];
+    int mediana=0;
 
     gerar_vetor_aleatorio(vetor);
     bubble_sort(vetor);
 
     for(int i=0; i<N;i++){
-    
+
      printf(" %d", vetor[i]);
     }
+
+    mediana=calc_mediana(vetor);
+    printf("\n MEDIANA: %d", mediana);
 
     return 0;
 }
