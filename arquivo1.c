@@ -3,14 +3,14 @@
 #include <stdlib.h>
 #include <locale.h>
 #define N 1000
-//cplusplus.com
-//teste para uso do git
+
 int gerar_vetor_aleatorio(int vet[]){
     for (int i =0;i<N;i++) {
        vet[i]= rand() % 10000;
     }
    return vet;
 }
+
 void bubble_sort(int vet[]){
       int controle = 0;
       for (int i = 1; i < N; i++) {
@@ -24,22 +24,38 @@ void bubble_sort(int vet[]){
       }
 }
 
-int calc_mediana(int vet[]){
+void calc_mediana(int vet[]){
 
     int mediana=0;
+    int mediana2=0;
     mediana= vet[499]+vet[500];
-    return mediana/2.;
+    mediana2=mediana/2.;
+    printf("\n\nMEDIANA: %d", mediana2);
 
 }
 
-int calc_media (int vet[]) {
+void calc_media (int vet[]) {
     int soma2 = 0;
     int media2 = 0;
     for (int i=0;i<N;i++) {
         soma2 = soma2 + vet[i];
     }
     media2 = soma2/N;
-    return media2;
+    printf ("\nMEDIA: %d", media2);
+}
+
+void imprime_vetor(int vet []){
+
+     for(int i=0; i<N;i++){
+        printf(" %d", vet[i]);
+    }
+
+}
+
+void maior_menor(int vet[]){
+
+    printf("\nMaior: %d", vet[0]);
+    printf("\nMenor: %d\n\n", vet[N-1]);
 }
 
 int main(){
@@ -47,22 +63,17 @@ int main(){
     setlocale(LC_ALL, "");
     int vetor[N];
     int mediana=0;
-    int media;
+    int media=0;
+
+    system("cls"); system("color B");
+    printf("\n\t\t\t\t\t\t\t\t\tESTE PROGRAMA GERA 1000 VETORES COM VALORES ALEATÓRIOS ATÉ 10000!\n\n");
 
     gerar_vetor_aleatorio(vetor);
     bubble_sort(vetor);
+    imprime_vetor(vetor);
+    calc_mediana(vetor);
+    calc_media(vetor);
+    maior_menor(vetor);
 
-    for(int i=0; i<N;i++){
-
-
-     printf(" %d", vetor[i]);
-    }
-
-    mediana=calc_mediana(vetor);
-    printf("\n MEDIANA: %d", mediana);
-
-    media = calc_media (vetor);
-    printf ("\n\n\n\n MEDIA: %d", media);
-
-    return 0;
+    return 0; 
 }
